@@ -19,7 +19,6 @@ body {
     justify-content: space-between;
     width: 100%;
   }
-<<<<<<< HEAD
 
   .userInfo .sr-only {
     position: absolute;
@@ -69,6 +68,4 @@ body {
     width: 104px;
     height: 56px;
   }
-=======
->>>>>>> 120652e14bb04354dd9ad3e904ce5414eb56f970
 }
