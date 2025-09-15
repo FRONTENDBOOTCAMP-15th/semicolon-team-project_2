@@ -1,0 +1,41 @@
+body {
+  position: relative;
+  .contents {
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h2 {
+      color: var(--primary, #0075ff);
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    p {
+      color: var(--primary, #0075ff);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    button {
+      color: var(--secondary, #fff);
+      background: var(--primary, #0075ff);
+      border: none;
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+}
