@@ -1,8 +1,4 @@
 @media screen and (max-width: 500px) {
-  .userInfo {
-    border: red solid;
-  }
-
   .userInfo .utDrive {
     /* width: 168px; */
     /* height: 40px;  */
