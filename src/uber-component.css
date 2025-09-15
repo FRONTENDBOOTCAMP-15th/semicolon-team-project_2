@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width: 500px) {
   .userInfo .utDrive {
     /* width: 168px; */
@@ -123,4 +125,7 @@
     text-decoration-color: gray;
     text-underline-offset: 10px;
   }
+}
+
+@media screen and (min-width: 501px) and (max-width: 850px) {
 }
