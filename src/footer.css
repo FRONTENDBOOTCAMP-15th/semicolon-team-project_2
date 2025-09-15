@@ -11,8 +11,15 @@ body {
     font-weight: 600;
     line-height: 150%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     width: 100%;
+
+    @media (max-width: 850px) {
+      .icon-wrapper {
+        flex-flow: column;
+        gap: 36px;
+      }
+    }
 
     .content {
       max-width: 1408px;
@@ -23,17 +30,31 @@ body {
       display: grid;
       row-gap: 64px;
 
+      @media (max-width: 850px) {
+        padding: 56px 32px;
+      }
+
+      @media (max-width: 500px) {
+        padding: 40px 24px;
+      }
+
       .main-logo {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
         gap: 28px;
       }
 
       .index {
         display: flex;
+        white-space: nowrap;
         gap: 200px;
         list-style: none;
         padding-left: 0;
+
+        @media (max-width: 850px) {
+          gap: 0;
+          justify-content: space-between;
+        }
 
         > li {
           font-size: 21px;
@@ -53,13 +74,24 @@ body {
 
       .icon-wrapper {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
 
         .icons {
           display: flex;
-          align-items: center;
-          gap: 121px;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 120px;
+
+          @media (max-width: 850px) {
+            width: 100%;
+            justify-content: space-between;
+            gap: 0;
+          }
+
+          @media (max-width: 500px) {
+            gap: 36px;
+          }
 
           .icon {
             display: flex;
@@ -68,10 +100,15 @@ body {
           }
 
           .lang {
+            /* white-space: nowrap; */
             display: flex;
-
-            align-items: flex-start;
+            flex-flow: row wrap;
             gap: 60px;
+
+            @media (max-width: 500px) {
+              flex-basis: 100%;
+              flex-direction: row;
+            }
 
             div {
               display: flex;
@@ -95,17 +132,30 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: 850px) {
+          flex-direction: column;
+          gap: 36px;
+          align-items: flex-start;
+        }
+
         .info {
           display: flex;
           align-items: center;
           gap: 182px;
+          @media (max-width: 850px) {
+            gap: 36px;
+          }
+
           .ad {
             width: 427px;
+
+            @media (max-width: 850px) {
+              width: 100%;
+            }
           }
         }
         .info-btn {
           display: flex;
-          align-items: flex-start;
           gap: 31px;
         }
       }
