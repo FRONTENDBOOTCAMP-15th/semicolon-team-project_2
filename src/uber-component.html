@@ -16,21 +16,26 @@
     <h1>우버 컴포넌트 요소</h1>
 
     <form class="userInfo">
-      <strong>UT로 운행하기</strong>
+      <strong class="utDrive">UT로 운행하기</strong>
       <div class="layoutSignup">
         <strong>기사로 가입하기</strong>
         <a href="">자세히 보기</a>
       </div>
       <!-- 이름 -->
-      <input class="firstName" type="text" required />
+      <label for="firstName">이름</label>
+      <input class="firstName" id="firstName" type="text" placeholder="이름" required />
       <!-- 성 -->
-      <input class="lastName" type="text" required />
+      <label for="lasttName">성</label>
+      <input class="lastName" id="lastnName" type="text" placeholder="성" required />
       <!-- 이메일 -->
-      <input class="userEmail" type="email" required />
+      <label for="userEmail">이메일</label>
+      <input class="userEmail" id="userEmail" type="email" placeholder="이메일" required />
       <!-- 비밀번호  -->
-      <input class="userPwd" type="password" required />
+      <label for="userPwd">비밀번호</label>
+      <input class="userPwd" id="userPwd" type="password" placeholder="비밀번호" required />
       <!-- 전화번호  -->
-      <input class="userTel" type="tel" required />
+      <label for="userTel">전화번호</label>
+      <input class="userTel" id="userTel" type="tel" placeholder="전화번호" required />
       <!-- 국적  -->
       <select class="userTel">
         <option value="Seoul,Korea,Republic of (South Korea)"></option>
