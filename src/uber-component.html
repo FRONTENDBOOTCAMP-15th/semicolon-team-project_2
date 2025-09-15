@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우버 컴포넌트 요소</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="./uber-component.css" />
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1>우버 컴포넌트 요소</h1>
+
+    <form class="userInfo">
+      <!-- 이름 -->
+      <input class="firstName" type="text" required />
+      <!-- 성 -->
+      <input class="lastName" type="text" required />
+      <!-- 이메일 -->
+      <input class="userEmail" type="email" required />
+      <!-- 비밀번호  -->
+      <input class="userPwd" type="password" required />
+      <!-- 전화번호  -->
+      <input class="userTel" type="tel" required />
+      <!-- 국적  -->
+      <select class="userTel">
+        <option value="Seoul,Korea,Republic of (South Korea)"></option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>
+        <option value="Australia">Australia</option>
+        <option value="Brazil">Brazil</option>
+        <option value="India">India</option>
+      </select>
+    </form>
+  </body>
+</html>
