@@ -1,0 +1,22 @@
+body {
+  margin: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .userInfo {
+    border: red solid;
+  }
+
+  .userInfo .utDrive {
+    width: 100%;
+    display: block;
+    background-color: blue;
+  }
+
+  .userInfo .layoutSignup {
+    display: flex;
+    background-color: yellow;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
