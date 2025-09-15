@@ -363,7 +363,6 @@
   }
 } */
 
-
 @media screen and (min-width: 851px) {
   .userInfo {
     display: flex;
@@ -390,6 +389,23 @@
     max-width: 600px;
   }
 
+  .userInfo .layoutSignup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .userInfo .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .userInfo .names {
     display: flex;
     gap: 16px;
@@ -404,12 +420,13 @@
 
   .userInfo .anothers input,
   .userInfo .anothers select {
-    width: 100%;
+    width: 570px;
     height: 50px;
     padding-left: 10px;
     font-size: 16px;
     border: 1px solid var(--gray-medium);
     background-color: var(--gray-light);
+    margin-bottom: 16px;
   }
 
   .userInfo .continue {
@@ -432,7 +449,6 @@
     padding: 0 24px;
     height: 56px;
     border-radius: 4px;
-    
   }
 
   .userInfo .tagSignup b {
