@@ -40,9 +40,15 @@ body {
     align-items: center;
     gap: 12px;
 
-    span {
-      color: var(--secondary, #fff);
-      font-weight: 700;
+    .lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      span {
+        color: var(--secondary, #fff);
+        font-weight: 700;
+      }
     }
 
     button {
@@ -53,6 +59,34 @@ body {
       font-weight: 600;
       line-height: 150%;
       padding: 8px 12px;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    justify-content: space-between;
+    padding: 12px 24px;
+
+    .nav-content {
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+
+      .lang {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        cursor: pointer;
+      }
     }
   }
 }
