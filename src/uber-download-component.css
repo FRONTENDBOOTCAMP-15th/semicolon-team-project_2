@@ -12,29 +12,32 @@
     padding: 4px;
   }
 
-  .backlayout .layoutApps {
+  .backlayout .layoutApps1 {
     font-size: 21.3px;
     background-color: palegoldenrod;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
+    justify-content: space-between; /* 양 끝에 요소 배치 */
+    align-items: center; /* y축 중앙 정렬 */
   }
 
-  .backlayout .layoutApps a {
+  .backlayout .layoutApps1 a {
     text-decoration: none;
     color: black;
     font-weight: 500;
-    flex-grow: 1;
-
-    /* width: 100%; */
-
-    text-align: center;
+    flex-grow: 1; /* 링크가 남은 공간을 모두 차지하도록 설정 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
   }
-}
 
-.backlayout .layoutApps img {
-  width: 104px;
-  height: 104px;
-  flex-grow: 1;
+  .backlayout .layoutApps1 .logoIcon {
+    width: 104px;
+    height: 104px;
+    /* flex-grow 속성을 제거하여 원본 크기를 유지 */
+  }
+
+  .backlayout .layoutApps1 .rightVector {
+    width: 56px;
+    height: 56px;
+    /* flex-grow 속성을 제거하여 원본 크기를 유지 */
+  }
 }
