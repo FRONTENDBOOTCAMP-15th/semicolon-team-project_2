@@ -1,0 +1,71 @@
+body {
+  margin: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .userInfo {
+    border: red solid;
+  }
+
+  .userInfo .utDrive {
+    width: 100%;
+    display: block;
+    background-color: blue;
+  }
+
+  .userInfo .layoutSignup {
+    display: flex;
+    background-color: yellow;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .userInfo .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .userInfo .names {
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    background-color: pink;
+  }
+
+  .userInfo .names input {
+    width: 218px;
+    height: 50px;
+  }
+
+  .userInfo .anothers {
+    display: flex;
+    /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+  }
+  .userInfo .anothers input,
+  .userInfo .anothers select {
+    width: 452px;
+    height: 50px;
+    box-sizing: border-box;
+  }
+
+  .userInfo .tagSignup {
+    display: flex;
+    background-color: blueviolet;
+    align-items: center;
+  }
+
+  .userInfo .tagSignup button {
+    width: 104px;
+    height: 56px;
+  }
+}
