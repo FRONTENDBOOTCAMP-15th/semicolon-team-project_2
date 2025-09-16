@@ -456,124 +456,103 @@ body {
 }
 
 /* uber-component */
-/* .userInfo {
-  @media screen and (max-width: 500px) {
-    .utDrive {
-      font-size: var(--font-size-xl);
-      display: block;
-      margin-bottom: 32px;
-    }
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  padding: 70px;
+  width: 100%;
+  box-sizing: border-box;
 
-    .layoutSignup {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 32px;
+  .utDrive {
+    flex: 1;
+    font-size: var(--font-size-xxxl);
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  .formSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .layoutSignup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .names {
+    display: flex;
+    gap: 16px;
+    /* max-width: 570px; */
+
+    input {
+      background: #f5f5f5;
+      border-color: var(--gray-light);
+      flex: 1;
+      height: 50px;
+      font-size: 16px;
+      padding-left: 10px;
       width: 100%;
-
-      strong {
-        font-size: var(--font-size-lg);
-      }
-      a {
-        font-size: var(--font-size-md);
-      }
-    }
-
-    .layoutSignup a,
-    .tagSignup a {
-      color: var(--text-color-primary);
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: var(--text-decoration-color);
-      text-underline-offset: 10px;
-    }
-
-    .tagSignup {
-      a {
-        font-size: 20px;
-      }
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .names {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-
-      input {
-        width: 216px;
-        height: 50px;
-        background: #f5f5f5;
-        border-color: #898989;
-        border-width: 1px;
-        font-size: 16px;
-        margin-bottom: 16px;
-        text-indent: 10px;
-      }
-    }
-
-    .anothers {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-
-      input,
-      select {
-        width: 452px;
-        height: 50px;
-        box-sizing: border-box;
-        background-color: var(--gray-light);
-        border-color: var(--gray-medium);
-        border-width: 1px;
-        font-size: 16px;
-        text-indent: 10px;
-      }
-
-      select {
-        font-weight: 700;
-      }
-    }
-
-    .tagSignup {
-      display: flex;
-      align-items: center;
-      padding: 16px;
-
-      button {
-        width: 104px;
-        height: 56px;
-        background-color: var(--blue-primary);
-        border: none;
-        padding: 4px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      b {
-        font-weight: 400;
-      }
-    }
-
-    .continue {
-      margin: 32px 0;
-      padding: 16px;
     }
   }
 
-  @media screen and (min-width: 501px) and (max-width: 850px) {
+  .anothers {
+    input,
+    select {
+      width: 100%;
+      height: 50px;
+      padding-left: 10px;
+      font-size: 16px;
+      border-color: var(--gray-light);
+      /* border: 1px solid var(--gray-medium); */
+      background-color: var(--gray-light);
+      margin-bottom: 16px;
+    }
+  }
+
+  .continue {
+    font-size: var(--font-size-ss);
+    line-height: 1.5;
+    color: var(--gray-medium);
+  }
+
+  .tagSignup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    button {
+      background-color: var(--blue-primary);
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 0 24px;
+      height: 56px;
+      border-radius: 4px;
+    }
+
+    b {
+      font-weight: 400;
+    }
+    a {
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    display: block;
+
     .utDrive {
       font-size: var(--font-size-xl);
       display: block;
@@ -609,25 +588,13 @@ body {
       }
     }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
     .names {
       display: flex;
       justify-content: center;
       gap: 8px;
 
       input {
-        width: 768px;
+        /* width: 768px; */
         height: 50px;
         background: #f5f5f5;
         border-color: #898989;
@@ -689,118 +656,113 @@ body {
     }
   }
 
-  @media screen and (min-width: 851px) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 64px;
-    padding: 70px;
-    width: 100%;
-    box-sizing: border-box;
-
+  @media screen and (max-width: 500px) {
     .utDrive {
-      flex: 0 0 50%;
-      font-size: var(--font-size-xxxl);
-      font-weight: bold;
-      text-align: center;
-      white-space: nowrap;
-      margin: 0 auto;
-      align-self: center;
-      text-align: left;
-    }
-
-    .formSection {
-      flex: 0 0 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      max-width: none;
-      min-width: 0;
-      width: 100%;
+      font-size: var(--font-size-xl);
+      display: block;
+      margin-bottom: 32px;
     }
 
     .layoutSignup {
       display: flex;
       justify-content: space-between;
-      width: ;
+      margin-bottom: 32px;
+      width: 100%;
+
+      strong {
+        font-size: var(--font-size-lg);
+      }
+      a {
+        font-size: var(--font-size-md);
+      }
     }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+    .layoutSignup a,
+    .tagSignup a {
+      color: var(--text-color-primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--text-decoration-color);
+      text-underline-offset: 10px;
+    }
+
+    .tagSignup {
+      a {
+        font-size: 20px;
+      }
     }
 
     .names {
       display: flex;
-      width: 585px;
-      gap: 16px;
-      max-width: 570px;
+      justify-content: center;
+      gap: 8px;
 
       input {
-        background: #f5f5f5;
-        border-color: var(--gray-light);
-        flex: 1;
+        /* width: 216px; */
+        width: 100%;
         height: 50px;
+        background: #f5f5f5;
+        border-color: #898989;
+        border-width: 1px;
         font-size: 16px;
-        padding-left: 10px;
+        margin-bottom: 16px;
+        text-indent: 10px;
       }
     }
 
     .anothers {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+
       input,
       select {
-        width: 570px;
+        /* width: 452px; */
         height: 50px;
-        padding-left: 10px;
-        font-size: 16px;
-        border-color: var(--gray-light);
-        /* border: 1px solid var(--gray-medium); */
+        box-sizing: border-box;
         background-color: var(--gray-light);
-        margin-bottom: 16px;
+        border-color: var(--gray-medium);
+        border-width: 1px;
+        font-size: 16px;
+        text-indent: 10px;
       }
-    }
 
-    .continue {
-      font-size: var(--font-size-ss);
-      line-height: 1.5;
-      color: var(--gray-medium);
+      select {
+        font-weight: 700;
+      }
     }
 
     .tagSignup {
       display: flex;
       align-items: center;
-      gap: 12px;
+      padding: 16px;
 
       button {
-        background-color: var(--blue-primary);
-        color: white;
-        font-weight: bold;
-        border: none;
-        padding: 0 24px;
+        width: 104px;
         height: 56px;
-        border-radius: 4px;
+        background-color: var(--blue-primary);
+        border: none;
+        padding: 4px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       b {
         font-weight: 400;
       }
-      a {
-        font-size: var(--font-size-sm);
-      }
+    }
+
+    .continue {
+      margin: 32px 0;
+      padding: 16px;
     }
   }
-} */
-
+}
 /* 지유 버전 */
-.userInfo {
+/* .userInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -890,10 +852,9 @@ body {
       }
     }
   }
-}
+} */
 
 /* footer */
-
 .footer-wrapper {
   background: var(--primary, #0075ff);
   color: var(--secondary, #fff);
@@ -912,7 +873,7 @@ body {
 
   .content {
     max-width: 1408px;
-    width: 100%;
+    width: calc(100% - 128px);
     margin: 0 auto;
     padding: 64px;
     align-items: center;
@@ -924,7 +885,6 @@ body {
     }
 
     @media (max-width: 500px) {
-      padding: 40px 24px;
     }
 
     .main-logo {
@@ -935,14 +895,23 @@ body {
 
     .index {
       display: flex;
-      white-space: nowrap;
+      /* white-space: nowrap; */
       gap: 200px;
       list-style: none;
       padding-left: 0;
 
       @media (max-width: 850px) {
+        flex-wrap: wrap;
+        min-width: 0;
         gap: 0;
         justify-content: space-between;
+
+        .index > li {
+          min-width: 0;
+        }
+      }
+
+      @media (max-width: 500px) {
       }
 
       > li {
