@@ -1,17 +1,18 @@
 body {
   position: relative;
-  background-image: url('./assets/UberTaxi_1x.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 400px;
+  background: url('./assets/UberTaxi_1x.png') no-repeat;
+  background-size: cover;
+  background-position: 75% center;
+  height: 36vh;
 
   @media (max-width: 850px) {
     background-image: url('./assets/UberTaxi_850.png');
+    background-position: right;
   }
 
   @media (max-width: 500px) {
     background-image: url('./assets/UberTaxi_500.png');
+    /* background-size: contain; */
   }
 
   .contents {
@@ -55,10 +56,11 @@ body {
       line-height: 150%;
     }
 
-    button {
+    a {
       color: var(--secondary, #fff);
       background: var(--primary, #0075ff);
       border: none;
+      text-decoration: none;
       display: inline-flex;
       gap: 4px;
       align-items: center;
