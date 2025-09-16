@@ -1,85 +1,115 @@
-.backlayout {
-  width: 500px;
-  height: 454px;
-  background-color: #f5f5f5;
+:root {
+  --gray-light: #f5f5f5;
+  --blue-primary: #0075ff;
+  --text-color-primary: black;
+  --font-size-lg: 21.3px;
+  --font-size-xl: 28.4px;
+}
 
-  /* display: flex; */
+.backlayout {
+  background-color: var(--gray-light);
+  padding: 40px 24px;
 }
 
 .downloadApps {
-  font-size: 21.3px;
-  padding-top: 40px;
-  /* background-color: red; */
-  padding-left: 24px;
+  font-size: var(--font-size-lg);
+  margin-bottom: 24px;
 }
 
-.backlayout .customerApps {
-  font-size: 21.3px;
+.customerApps,
+.driverApps {
   background-color: white;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* 양 끝에 요소 배치 */
+  justify-content: space-between;
   align-items: center;
-  width: 452px;
-  height: 136px;
-  margin-left: 24px;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
-.backlayout .customerApps a {
+.logoIcon {
+  width: 104px;
+  height: 104px;
+}
+
+.rightVector {
+  width: 56px;
+  height: 56px;
+}
+
+.customerApps a,
+.driverApps a {
   text-decoration: none;
   color: black;
   font-weight: 500;
-  flex-grow: 1; /* 링크가 남은 공간을 모두 차지하도록 설정 */
-  text-align: center; /* 텍스트를 중앙 정렬 */
-  margin-right: 16px;
+  flex-grow: 1;
+  text-align: center;
+  font-size: var(--font-size-lg);
 }
 
-.backlayout .customerApps .logoIcon {
-  width: 104px;
-  height: 104px;
-  margin-left: 16px;
-  /* flex-grow 속성을 제거하여 원본 크기를 유지 */
+@media screen and (max-width: 500px) {
+  .backlayout {
+    max-width: 100%;
+  }
+
+  .customerApps,
+  .driverApps {
+    flex-direction: row;
+    width: 100%;
+    height: 136px;
+  }
 }
 
-.backlayout .customerApps .rightVector {
-  width: 56px;
-  height: 56px;
-  margin-right: 16px;
-  /* flex-grow 속성을 제거하여 원본 크기를 유지 */
+@media screen and (min-width: 501px) and (max-width: 849px) {
+  .backlayout {
+    max-width: 100%;
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .appContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .customerApps,
+  .driverApps {
+    width: 400px;
+    height: 168px;
+  }
 }
 
-.backlayout .driverApps {
-  font-size: 21.3px;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* 양 끝에 요소 배치 */
-  align-items: center;
-  width: 452px;
-  height: 136px;
-  margin-left: 24px;
-  margin-top: 36px;
-}
+@media screen and (min-width: 850px) {
+  .backlayout {
+    max-width: 1680px;
+    height: 409px;
+  }
 
-.backlayout .driverApps a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  flex-grow: 1; /* 링크가 남은 공간을 모두 차지하도록 설정 */
-  text-align: center; /* 텍스트를 중앙 정렬 */
-  margin-right: 16px;
-}
+  .appContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
-.backlayout .driverApps .logoIcon {
-  width: 104px;
-  height: 104px;
-  margin-left: 16px;
-  /* flex-grow 속성을 제거하여 원본 크기를 유지 */
-}
+  .customerApps,
+  .driverApps {
+    width: 820px;
+    height: 192px;
+    
+  }
 
-.backlayout .driverApps .rightVector {
-  width: 56px;
-  height: 56px;
-  margin-right: 16px;
-  /* flex-grow 속성을 제거하여 원본 크기를 유지 */
+  .logoIcon {
+    width: 80px;
+    height: 80px;
+    margin-left: 16px;
+  }
+
+  .rightVector {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+  }
 }
