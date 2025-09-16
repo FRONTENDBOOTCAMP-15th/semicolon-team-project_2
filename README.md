@@ -1,7 +1,2 @@
-###### Likelion Front-end Bootcamp
-
-# Project(CSS)
-
-멋쟁이 사자처럼 프론트엔드 부트캠프💕
-
-여러분의 팀 협업을 응원합니다. 화이팅 👏‼️
+### semicolon - 서유기 ( 서주희 , 김지유 , 채민기 )
+https://fabulous-travesseiro-7e0700.netlify.app/
