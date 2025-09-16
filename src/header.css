@@ -11,11 +11,12 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  .nav {
+  nav {
     display: flex;
+    align-items: center;
 
-    svg {
-      align-self: center;
+    a {
+      align-items: center;
     }
 
     .nav-content {

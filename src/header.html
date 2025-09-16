@@ -10,48 +10,49 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="nav">
-        <svg width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.7203 4.62183H26.52V20.4667H31.7203V4.62183Z" fill="url(#paint0_linear_76872_1243)" />
-          <path d="M39 0.0222168H19.2402V4.62266H39V0.0222168Z" fill="url(#paint1_linear_76872_1243)" />
-          <path d="M14.04 0.0222168V16.3773H5.20026V0.0222168H0V12.2893C0 17.8343 4.04976 20.9785 9.61974 20.9785C15.1897 20.9785 19.2395 17.8343 19.2395 12.2893V0.0222168H14.04Z" fill="white" />
-          <defs>
-            <linearGradient id="paint0_linear_76872_1243" x1="29.12" y1="20.5819" x2="29.12" y2="4.99643" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#EF5394" />
-              <stop offset="0.65" stop-color="#8B52A0" />
-              <stop offset="1" stop-color="#5D4EA1" />
-            </linearGradient>
-            <linearGradient id="paint1_linear_76872_1243" x1="19.3658" y1="2.32202" x2="38.9941" y2="2.32202" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#65C081" />
-              <stop offset="0.0637" stop-color="#62B68B" />
-              <stop offset="0.2224" stop-color="#5AA49E" />
-              <stop offset="0.3821" stop-color="#5495AB" />
-              <stop offset="0.5406" stop-color="#5089B3" />
-              <stop offset="0.6972" stop-color="#4D80B8" />
-              <stop offset="0.8513" stop-color="#4B7BBB" />
-              <stop offset="1" stop-color="#497ABD" />
-            </linearGradient>
-          </defs>
-        </svg>
+      <nav aria-label="주 메뉴">
+        <a href="/" aria-label="UT 홈">
+          <svg role="img" aria-hidden="true" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.7203 4.62183H26.52V20.4667H31.7203V4.62183Z" fill="url(#paint0_linear_76872_1243)" />
+            <path d="M39 0.0222168H19.2402V4.62266H39V0.0222168Z" fill="url(#paint1_linear_76872_1243)" />
+            <path d="M14.04 0.0222168V16.3773H5.20026V0.0222168H0V12.2893C0 17.8343 4.04976 20.9785 9.61974 20.9785C15.1897 20.9785 19.2395 17.8343 19.2395 12.2893V0.0222168H14.04Z" fill="white" />
+            <defs>
+              <linearGradient id="paint0_linear_76872_1243" x1="29.12" y1="20.5819" x2="29.12" y2="4.99643" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#EF5394" />
+                <stop offset="0.65" stop-color="#8B52A0" />
+                <stop offset="1" stop-color="#5D4EA1" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_76872_1243" x1="19.3658" y1="2.32202" x2="38.9941" y2="2.32202" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#65C081" />
+                <stop offset="0.0637" stop-color="#62B68B" />
+                <stop offset="0.2224" stop-color="#5AA49E" />
+                <stop offset="0.3821" stop-color="#5495AB" />
+                <stop offset="0.5406" stop-color="#5089B3" />
+                <stop offset="0.6972" stop-color="#4D80B8" />
+                <stop offset="0.8513" stop-color="#4B7BBB" />
+                <stop offset="1" stop-color="#497ABD" />
+              </linearGradient>
+            </defs></svg
+        ></a>
         <ul class="nav-content">
-          <li><a href="">기업 정보</a></li>
-          <li><a href="">안전</a></li>
-          <li><a href="">고객지원</a></li>
-          <li><a href="">차량 서비스</a></li>
-          <li><a href="">기사지원</a></li>
+          <li><a href="/">기업 정보</a></li>
+          <li><a href="/">안전</a></li>
+          <li><a href="/">고객지원</a></li>
+          <li><a href="/">차량 서비스</a></li>
+          <li><a href="/">기사지원</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="buttons">
-        <div class="lang">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="lang" aria-label="언어 선택">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206V8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21" stroke="white" />
             <path d="M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022V16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5" stroke="white" />
             <circle cx="12" cy="12" r="9.5" stroke="white" />
           </svg>
-          <span>KO-KR</span>
+          <span lang="ko">KO-KR</span>
         </div>
         <button type="button">가입하기</button>
-        <div class="hamburger">
+        <div class="hamburger" aria-label="메뉴 열기">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 10L6 10" stroke="white" stroke-width="2" stroke-linecap="round" />
             <path d="M18 14L6 14" stroke="white" stroke-width="2" stroke-linecap="round" />
