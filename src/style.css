@@ -1,1 +1,950 @@
 /* CSS 스타일을 작성해 주세요. */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* uber-download */
+  --gray-light: #f5f5f5;
+  --gray-medium: #898989;
+  --blue-primary: #0075ff;
+  --text-color-primary: black;
+  --text-decoration-color: gray;
+  --font-size-ss: 12px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 21.3px;
+  --font-size-xl: 28.4px;
+  --font-size-xxxl: 50.5px;
+
+  /* uber-component */
+  --gray-light: #f5f5f5;
+  --blue-primary: #0075ff;
+  --text-color-primary: black;
+  --font-size-lg: 21.3px;
+  --font-size-xl: 28.4px;
+}
+/* body {
+  margin: 0;
+  display: flex;
+} */
+
+/* header */
+.wrapper {
+  background: var(--primary, #0075ff);
+  display: flex;
+  width: 100%;
+  /* max-width: 1408px; */
+  padding: 12px 64px;
+  justify-content: space-between;
+  align-items: center;
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      align-items: center;
+    }
+
+    .nav-content {
+      li {
+        display: inline-block;
+        padding: 4px 8px;
+        align-items: center;
+        gap: 4px;
+
+        a {
+          text-decoration: none;
+          color: var(--secondary, #fff);
+          font-weight: 600;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      span {
+        color: var(--secondary, #fff);
+        font-weight: 700;
+      }
+    }
+
+    button {
+      border: none;
+      border-radius: 22px;
+      background: var(--secondary, #fff);
+      color: var(--primary, #0075ff);
+      font-weight: 600;
+      line-height: 150%;
+      padding: 8px 12px;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    justify-content: space-between;
+    padding: 12px 24px;
+
+    .nav-content {
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+
+      .lang {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* banner */
+.banner-body {
+  position: relative;
+  background: url('../src/assets/UberTaxi_1x.png') no-repeat;
+  background-size: cover;
+  background-position: 75% center;
+  height: 36vh;
+
+  @media (max-width: 850px) {
+    background-image: url('../src/assets/UberTaxi_850.png');
+    background-position: right;
+  }
+
+  @media (max-width: 500px) {
+    background-image: url('../src/assets/UberTaxi_500.png');
+    /* background-size: contain; */
+  }
+
+  .contents {
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    @media (max-width: 850px) {
+      left: 30%;
+    }
+
+    @media (max-width: 500px) {
+      left: 35%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h2 {
+      color: var(--primary, #0075ff);
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 140%;
+
+      @media (max-width: 850px) {
+        font-size: 37px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      color: var(--primary, #0075ff);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    a {
+      color: var(--secondary, #fff);
+      background: var(--primary, #0075ff);
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+}
+
+/* about */
+.about-body {
+  inline-size: 100%;
+  max-width: 105rem;
+  padding: 0 1rem;
+}
+
+.about-container {
+  display: flex;
+  inline-size: 100%;
+  max-width: 72rem;
+  height: auto;
+  gap: 2rem;
+}
+
+.company,
+.news {
+  display: flex;
+  flex-direction: column; /* 열 방향으로 정렬하기 */
+  flex: 1; /* 동일한 비율로 분할 */
+  gap: 6px;
+  min-width: 300px; /* 최소 크기 설정 */
+  height: auto;
+  padding: 1rem; /* 내부 여백 */
+
+  span {
+    font-size: 21px;
+    font-weight: 500;
+    width: 74px;
+    height: 32px;
+    color: #0075ff;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  a:link,
+  a:visited {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .company,
+  .news {
+    min-width: 200px; /* 최소 너비 조정 */
+  }
+}
+
+@media (max-width: 500px) {
+  .about-body {
+    padding: 0 0.5rem; /* 여백 줄이기 */
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .company,
+  .news {
+    min-width: auto;
+    padding: 0.75rem;
+  }
+}
+
+/* download */
+.backlayout {
+  background-color: var(--gray-light);
+  padding: 40px 24px;
+
+  .downloadApps {
+    font-size: var(--font-size-lg);
+    margin-bottom: 24px;
+  }
+
+  .customerApps,
+  .driverApps {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 24px;
+
+    .logoIcon {
+      width: 104px;
+      height: 104px;
+    }
+
+    .rightVector {
+      width: 56px;
+      height: 56px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      flex-grow: 1;
+      text-align: center;
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    max-width: 500px;
+
+    .customerApps,
+    .driverApps {
+      flex-direction: row;
+      max-width: 452px;
+      height: 136px;
+    }
+  }
+
+  @media screen and (min-width: 501px) and (max-width: 849px) {
+    max-width: 850px;
+    flex-direction: column;
+    align-items: center;
+
+    .appContainer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .customerApps {
+      a {
+        max-width: 786px;
+      }
+    }
+
+    .customerApps,
+    .driverApps {
+      max-width: 768px;
+      height: 168px;
+      flex-grow: 1;
+    }
+  }
+
+  @media screen and (min-width: 850px) {
+    max-width: 1152px;
+    height: 281px;
+
+    .appContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .customerApps,
+    .driverApps {
+      width: 558px;
+      height: 192px;
+    }
+
+    .logoIcon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .rightVector {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+/* qna */
+.container {
+  font-size: 16px;
+
+  .question {
+    position: relative;
+    inline-size: 100%;
+    padding: 16px;
+    margin-inline: 4px;
+    border-bottom: 1px solid #d9d9d9;
+    box-sizing: border-box; /* 박스 모델 명확화 */
+
+    span {
+      font-weight: bold;
+      display: block;
+      max-width: calc(100% - 24px); /* svg 영역을 만들기 위해 calc 사용 */
+      overflow-wrap: break-word; /* 긴 단어 강제 줄바꿈 */
+    }
+    /* input checkbox */
+    .checkbox {
+      position: absolute;
+      top: 16px; /* padding 값과 동일 */
+      right: 16px; /* 오른쪽 끝에서 16px */
+      width: 24px; /* SVG 크기 고정 */
+      height: 24px; /* SVG 크기 고정 */
+      z-index: 10; /* 다른 요소 위에 배치 */
+
+      /* 기본으로 제공해주는 체크 박스는 안보이게 처리 */
+      input {
+        display: none;
+      }
+
+      label {
+        /* 마우스 커서를 아이콘에 갖다대면 누를 수 있는 커서로 변경 */
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+
+        /* 아이콘을 누르기 전에는 + 아이콘을 누르면 - 아이콘을 노출 */
+        .plus-icon {
+          display: block;
+        }
+
+        .minus-icon {
+          display: none;
+        }
+      }
+
+      input:checked + label {
+        .plus-icon {
+          display: none;
+        }
+
+        .minus-icon {
+          display: block;
+        }
+      }
+    }
+
+    /* input이 체크되기 전에는 질문에 대한 답변 div를 출력하지 않도록 설정 */
+    .answer {
+      display: none;
+      border-bottom: 1px solid #9e9e9e;
+    }
+
+    /* :has 선택자: 관계형 의사 클래스
+    부모 요소가 특정 하위 요소를 가지고 있을 경우 사용하는 선택자 
+    input이 체크되면 답변 div를 출력 */
+    &:has(input:checked) .answer {
+      display: block;
+    }
+  }
+}
+
+/* uber-component */
+.userInfo {
+  @media screen and (max-width: 500px) {
+    .utDrive {
+      font-size: var(--font-size-xl);
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    .layoutSignup {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      width: 100%;
+
+      strong {
+        font-size: var(--font-size-lg);
+      }
+      a {
+        font-size: var(--font-size-md);
+      }
+    }
+
+    .layoutSignup a,
+    .tagSignup a {
+      color: var(--text-color-primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--text-decoration-color);
+      text-underline-offset: 10px;
+    }
+
+    .tagSignup {
+      a {
+        font-size: 20px;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .names {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      input {
+        width: 216px;
+        height: 50px;
+        background: #f5f5f5;
+        border-color: #898989;
+        border-width: 1px;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-indent: 10px;
+      }
+    }
+
+    .anothers {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+
+      input,
+      select {
+        width: 452px;
+        height: 50px;
+        box-sizing: border-box;
+        background-color: var(--gray-light);
+        border-color: var(--gray-medium);
+        border-width: 1px;
+        font-size: 16px;
+        text-indent: 10px;
+      }
+
+      select {
+        font-weight: 700;
+      }
+    }
+
+    .tagSignup {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+
+      button {
+        width: 104px;
+        height: 56px;
+        background-color: var(--blue-primary);
+        border: none;
+        padding: 4px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      b {
+        font-weight: 400;
+      }
+    }
+
+    .continue {
+      margin: 32px 0;
+      padding: 16px;
+    }
+  }
+
+  @media screen and (min-width: 501px) and (max-width: 850px) {
+    .utDrive {
+      font-size: var(--font-size-xl);
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    .layoutSignup {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      width: 100%;
+
+      strong {
+        font-size: var(--font-size-lg);
+      }
+      a {
+        font-size: var(--font-size-md);
+      }
+    }
+
+    .layoutSignup a,
+    .tagSignup a {
+      color: var(--text-color-primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--text-decoration-color);
+      text-underline-offset: 10px;
+    }
+
+    .tagSignup {
+      a {
+        font-size: 20px;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .names {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      input {
+        width: 768px;
+        height: 50px;
+        background: #f5f5f5;
+        border-color: #898989;
+        border-width: 1px;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-indent: 10px;
+      }
+    }
+
+    .anothers {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+
+      input,
+      select {
+        height: 50px;
+        box-sizing: border-box;
+        background-color: var(--gray-light);
+        border-color: var(--gray-medium);
+        border-width: 1px;
+        font-size: 16px;
+        text-indent: 10px;
+      }
+
+      select {
+        font-weight: 700;
+      }
+    }
+
+    .tagSignup {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+
+      button {
+        width: 104px;
+        height: 56px;
+        background-color: var(--blue-primary);
+        border: none;
+        padding: 4px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      b {
+        font-weight: 400;
+        font-size: var(--font-size-ss);
+      }
+    }
+
+    .continue {
+      margin: 32px 0;
+      padding: 16px;
+    }
+  }
+
+  @media screen and (min-width: 851px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 64px;
+    padding: 80px;
+
+    .utDrive {
+      flex: 1;
+      font-size: var(--font-size-xxxl);
+      font-weight: bold;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .formSection {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 600px;
+    }
+
+    .layoutSignup {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .names {
+      display: flex;
+      gap: 16px;
+
+      input {
+        flex: 1;
+        height: 50px;
+        font-size: 16px;
+        padding-left: 10px;
+      }
+    }
+
+    .anothers {
+      input,
+      select {
+        width: 570px;
+        height: 50px;
+        padding-left: 10px;
+        font-size: 16px;
+        border: 1px solid var(--gray-medium);
+        background-color: var(--gray-light);
+        margin-bottom: 16px;
+      }
+    }
+
+    .continue {
+      font-size: var(--font-size-ss);
+      line-height: 1.5;
+      color: var(--gray-medium);
+    }
+
+    .tagSignup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      button {
+        background-color: var(--blue-primary);
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 0 24px;
+        height: 56px;
+        border-radius: 4px;
+      }
+
+      b {
+        font-weight: 400;
+      }
+      a {
+        font-size: var(--font-size-sm);
+      }
+    }
+  }
+}
+
+/* footer */
+.footer-body {
+  margin: 0;
+
+  .wrapper {
+    background: var(--primary, #0075ff);
+    color: var(--secondary, #fff);
+    font-weight: 600;
+    line-height: 150%;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+
+    @media (max-width: 850px) {
+      .icon-wrapper {
+        flex-flow: column;
+        gap: 36px;
+      }
+    }
+
+    .content {
+      max-width: 1408px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 64px;
+      align-items: center;
+      display: grid;
+      row-gap: 64px;
+
+      @media (max-width: 850px) {
+        padding: 56px 32px;
+      }
+
+      @media (max-width: 500px) {
+        padding: 40px 24px;
+      }
+
+      .main-logo {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 28px;
+      }
+
+      .index {
+        display: flex;
+        white-space: nowrap;
+        gap: 200px;
+        list-style: none;
+        padding-left: 0;
+
+        @media (max-width: 850px) {
+          gap: 0;
+          justify-content: space-between;
+        }
+
+        > li {
+          font-size: 21px;
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+
+            li {
+              font-size: 16px;
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+
+      .icon-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .icons {
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 120px;
+
+          @media (max-width: 850px) {
+            width: 100%;
+            justify-content: space-between;
+            gap: 0;
+          }
+
+          @media (max-width: 500px) {
+            gap: 36px;
+          }
+
+          .icon {
+            display: flex;
+            width: 236px;
+            justify-content: space-between;
+          }
+
+          .lang {
+            /* white-space: nowrap; */
+            display: flex;
+            flex-flow: row wrap;
+            gap: 60px;
+
+            @media (max-width: 500px) {
+              flex-basis: 100%;
+              flex-direction: row;
+            }
+
+            div {
+              display: flex;
+              gap: 4px;
+            }
+          }
+        }
+
+        .buttons {
+          display: inline-flex;
+          gap: 16px;
+
+          button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .footer {
+        color: var(--contents-contentTertiary, #a6a6a6);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 160%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 850px) {
+          flex-direction: column;
+          gap: 36px;
+          align-items: flex-start;
+        }
+
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 182px;
+          @media (max-width: 850px) {
+            gap: 36px;
+          }
+
+          .ad {
+            width: 427px;
+
+            @media (max-width: 850px) {
+              width: 100%;
+            }
+          }
+        }
+        .info-btn {
+          display: flex;
+          gap: 31px;
+        }
+      }
+    }
+  }
+}
