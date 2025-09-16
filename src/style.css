@@ -456,7 +456,7 @@ body {
 }
 
 /* uber-component */
-/* .userInfo {
+.userInfo {
   @media screen and (max-width: 500px) {
     .utDrive {
       font-size: var(--font-size-xl);
@@ -723,7 +723,6 @@ body {
     .layoutSignup {
       display: flex;
       justify-content: space-between;
-      width: ;
     }
 
     .sr-only {
@@ -797,10 +796,10 @@ body {
       }
     }
   }
-} */
+}
 
 /* 지유 버전 */
-.userInfo {
+/* .userInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -890,7 +889,7 @@ body {
       }
     }
   }
-}
+} */
 
 /* footer */
 
