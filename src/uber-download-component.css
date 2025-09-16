@@ -1,0 +1,118 @@
+:root {
+  --gray-light: #f5f5f5;
+  --blue-primary: #0075ff;
+  --text-color-primary: black;
+  --font-size-lg: 21.3px;
+  --font-size-xl: 28.4px;
+}
+
+.backlayout {
+  background-color: var(--gray-light);
+  padding: 40px 24px;
+}
+
+.downloadApps {
+  font-size: var(--font-size-lg);
+  margin-bottom: 24px;
+}
+
+.customerApps,
+.driverApps {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.logoIcon {
+  width: 104px;
+  height: 104px;
+}
+
+.rightVector {
+  width: 56px;
+  height: 56px;
+}
+
+.customerApps a,
+.driverApps a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: center;
+  font-size: var(--font-size-lg);
+}
+
+@media screen and (max-width: 500px) {
+  .backlayout {
+    max-width: 500px;
+  }
+
+  .customerApps,
+  .driverApps {
+    flex-direction: row;
+    max-width: 452px;
+    height: 136px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 849px) {
+  .backlayout {
+    max-width: 850px;
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .appContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .customerApps a {
+    max-width: 786px;
+  }
+
+  .customerApps,
+  .driverApps {
+    max-width: 768px;
+    height: 168px;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .backlayout {
+    max-width: 1152px;
+    height: 281px;
+  }
+
+  .appContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .customerApps,
+  .driverApps {
+    width: 558px;
+    height: 192px;
+  }
+
+  .logoIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .rightVector {
+    width: 40px;
+    height: 40px;
+  }
+}
