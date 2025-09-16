@@ -120,6 +120,12 @@ body {
         .buttons {
           display: inline-flex;
           gap: 16px;
+
+          button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+          }
         }
       }
 
