@@ -1,0 +1,74 @@
+body {
+  inline-size: 100%;
+  max-width: 105rem;
+  padding: 0 1rem;
+}
+
+.about-container {
+  display: flex;
+  inline-size: 100%;
+  max-width: 72rem;
+  height: auto;
+  gap: 2rem;
+}
+
+.company,
+.news {
+  display: flex;
+  flex-direction: column; /* 열 방향으로 정렬하기 */
+  flex: 1; /* 동일한 비율로 분할 */
+  gap: 6px;
+  min-width: 300px; /* 최소 크기 설정 */
+  height: auto;
+  padding: 1rem; /* 내부 여백 */
+
+  span {
+    font-size: 21px;
+    font-weight: 500;
+    width: 74px;
+    height: 32px;
+    color: #0075ff;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  a:link,
+  a:visited {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .company,
+  .news {
+    min-width: 200px; /* 최소 너비 조정 */
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0 0.5rem; /* 여백 줄이기 */
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .company,
+  .news {
+    min-width: auto;
+    padding: 0.75rem;
+  }
+}
