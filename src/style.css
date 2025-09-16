@@ -204,10 +204,10 @@
 
 .about-container {
   display: flex;
-  inline-size: 100%;
   max-width: 72rem;
   height: auto;
   gap: 2rem;
+  margin: 4rem auto;
 }
 
 .company,
@@ -379,6 +379,9 @@
 /* qna */
 .container {
   font-size: 16px;
+  max-width: 1280px;
+  margin: 4rem auto;
+  padding: 0 1rem;
 
   .question {
     position: relative;
@@ -439,6 +442,7 @@
     .answer {
       display: none;
       border-bottom: 1px solid #9e9e9e;
+      margin: 24px 0;
     }
 
     /* :has 선택자: 관계형 의사 클래스
