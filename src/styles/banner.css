@@ -1,17 +1,17 @@
-body {
+.banner-body {
   position: relative;
-  background: url('./assets/UberTaxi_1x.png') no-repeat;
+  background: url('../assets/UberTaxi_1x.png') no-repeat;
   background-size: cover;
   background-position: 75% center;
   height: 36vh;
 
   @media (max-width: 850px) {
-    background-image: url('./assets/UberTaxi_850.png');
+    background-image: url('../assets/UberTaxi_850.png');
     background-position: right;
   }
 
   @media (max-width: 500px) {
-    background-image: url('./assets/UberTaxi_500.png');
+    background-image: url('../assets/UberTaxi_500.png');
     /* background-size: contain; */
   }
 
