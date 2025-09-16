@@ -48,20 +48,20 @@
 
 @media screen and (max-width: 500px) {
   .backlayout {
-    max-width: 100%;
+    max-width: 500px;
   }
 
   .customerApps,
   .driverApps {
     flex-direction: row;
-    width: 100%;
+    max-width: 452px;
     height: 136px;
   }
 }
 
 @media screen and (min-width: 501px) and (max-width: 849px) {
   .backlayout {
-    max-width: 100%;
+    max-width: 850px;
 
     /* display: flex; */
     flex-direction: column;
@@ -72,19 +72,25 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-direction: column;
+  }
+
+  .customerApps a {
+    max-width: 786px;
   }
 
   .customerApps,
   .driverApps {
-    width: 400px;
+    max-width: 768px;
     height: 168px;
+    flex-grow: 1;
   }
 }
 
 @media screen and (min-width: 850px) {
   .backlayout {
-    max-width: 1680px;
-    height: 409px;
+    max-width: 1152px;
+    height: 281px;
   }
 
   .appContainer {
@@ -96,20 +102,17 @@
 
   .customerApps,
   .driverApps {
-    width: 820px;
+    width: 558px;
     height: 192px;
-    
   }
 
   .logoIcon {
     width: 80px;
     height: 80px;
-    margin-left: 16px;
   }
 
   .rightVector {
     width: 40px;
     height: 40px;
-    margin-right: 16px;
   }
 }
