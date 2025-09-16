@@ -457,6 +457,7 @@ body {
 
 /* uber-component */
 .userInfo {
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -552,6 +553,9 @@ body {
 
   @media screen and (max-width: 850px) {
     display: block;
+
+
+  @media screen and (max-width: 500px) {
 
     .utDrive {
       font-size: var(--font-size-xl);
@@ -760,7 +764,7 @@ body {
       padding: 16px;
     }
   }
-}
+
 /* 지유 버전 */
 /* .userInfo {
   display: grid;
